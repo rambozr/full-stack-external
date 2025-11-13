@@ -1,0 +1,86 @@
+app.jsx
+import { useState } from "react";
+import "./App.css";
+
+function App() {
+  // State to hold todo items
+  const [todos, setTodos] = useState([]);
+  // State to hold the current input value
+  const [input, setInput] = useState("");
+
+  // Function to handle adding a new todo
+  const addTodo = (e) => {
+    e.preventDefault();
+    if (input.trim() === "") return; // avoid empty items
+    setTodos([...todos, input]);
+    setInput("");
+  };
+
+  return (
+    <div className="app">
+      <h1>📝 Todo List</h1>
+
+      {/* Input form */}
+      <form onSubmit={addTodo}>
+        <input
+          type="text"
+          placeholder="Add a new task..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      {/* Display list of todos */}
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index}>{todo}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+
+
+app cc
+
+.app {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4b50e3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: #f3f3f3;
+  padding: 10px;
+  margin: 5px auto;
+  width: 250px;
+  border-radius: 5px;
+}
