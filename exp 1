@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Info Card</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card">
+    <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+    <h2>Ryan Gosling</h2>
+    <p>Email: ryan.gosling@example.com</p>
+  </div>
+</body>
+</html>
+
+\\style 
+
+/* Body setup */
+body {
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Card box styling */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 280px;
+}
+
+/* Image styling */
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #66a6ff;
+}
+
+/* Text styling */
+h2 {
+  margin: 10px 0;
+  color: #333;
+}
+
+p {
+  color: #555;
+  font-size: 14px;
+}
